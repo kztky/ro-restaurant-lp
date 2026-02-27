@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>炉 RO — 炭火と発酵の料理店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+SC:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="close">
+    <span></span><span></span>
+  </button>
+  <ul class="mobile-menu-links">
+    <li><a href="#concept"><span class="nav-ja" data-i18n="nav.concept">コンセプト</span></a></li>
+    <li><a href="#menu"><span class="nav-ja" data-i18n="nav.menu">メニュー</span></a></li>
+    <li><a href="#space"><span class="nav-ja" data-i18n="nav.space">空間</span></a></li>
+    <li><a href="#access"><span class="nav-ja" data-i18n="nav.access">アクセス</span></a></li>
+  </ul>
+  <a href="#reserve" class="mobile-menu-reserve" data-i18n="nav.reserve">Reservation</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="ja">JP</button>
+    <div class="lang-sep"></div>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <div class="lang-sep"></div>
+    <button class="lang-btn" data-lang="zh-hans">简</button>
+    <div class="lang-sep"></div>
+    <button class="lang-btn" data-lang="zh-hant">繁</button>
+    <div class="lang-sep"></div>
+    <button class="lang-btn" data-lang="ko">KO</button>
+  </div>
+</div>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <button class="lang-btn active" data-lang="ja">JP</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" data-lang="en">EN</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" data-lang="zh-hans">简</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" data-lang="zh-hant">繁</button>
+  <div class="lang-sep"></div>
+  <button class="lang-btn" data-lang="ko">KO</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">炉<span>RO</span></a>
+  <ul class="nav-links">
+    <li><a href="#concept" data-i18n="nav.concept">概念</a></li>
+    <li><a href="#menu" data-i18n="nav.menu">献立</a></li>
+    <li><a href="#space" data-i18n="nav.space">空間</a></li>
+    <li><a href="#access" data-i18n="nav.access">案内</a></li>
+  </ul>
+  <a href="#reserve" class="nav-reserve" data-i18n="nav.reserve">Reservation</a>
+  <button class="hamburger" id="hamburger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide hero-slide-1 active"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">青森 — Aomori</p>
+    <h1 class="hero-title">炉</h1>
+    <span class="hero-title-en">charcoal &amp; fermentation</span>
+    <p class="hero-desc" data-i18n="hero.desc">
+      津軽の炭火と、時間をかけて育てた発酵の味。<br>素材が語る言葉に、ただ耳を傾ける夜。
+    </p>
+    <a href="#reserve" class="hero-reserve-link">Reservation →</a>
+    <a href="#concept" class="hero-cta">
+      <span data-i18n="hero.cta">物語を読む</span>
+      <span class="hero-cta-arrow"></span>
+    </a>
+  </div>
+  <div class="hero-indicators">
+    <div class="hero-indicator active" data-index="0"></div>
+    <div class="hero-indicator" data-index="1"></div>
+    <div class="hero-indicator" data-index="2"></div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section class="concept section-dimmable reveal" id="concept">
+  <div class="concept-text">
+    <p class="concept-label" data-i18n="concept.label">— Our Philosophy</p>
+    <h2 data-i18n="concept.title">火と菌が<br>つくる、時間</h2>
+    <p data-i18n="concept.p1">
+      津軽炭火の遠赤外線が素材の細胞を穏やかに開き、
+      長期発酵が引き出した旨みと重なる瞬間がある。
+      それは料理ではなく、時間の結晶だと私たちは考えます。
+    </p>
+    <p data-i18n="concept.p2">
+      青森の山と海が育てた食材だけを使い、
+      添加物を一切使わない発酵調味料で仕上げる。
+      シンプルであるほど、素材の記憶が鮮明になる。
+    </p>
+  </div>
+  <div class="concept-image">
+    <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?w=800&q=80" alt="">
+    <span class="concept-image-caption" data-i18n="concept.caption">津軽備長炭、800℃の静寂</span>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-mark">◈</span>
+  <div class="divider-line"></div>
+</div>
+
+<!-- MENU -->
+<section class="menu-section section-dimmable reveal" id="menu">
+  <div class="section-header">
+    <h2><span data-i18n="menu.subtitle">Omakase Menu</span><span data-i18n="menu.title">おまかせ献立</span></h2>
+    <a href="#" class="section-link" data-i18n="menu.link">Full Menu →</a>
+  </div>
+  <div class="menu-layout">
+    <div class="menu-grid" id="menuGrid">
+      <!-- items injected by JS -->
+    </div>
+    <div class="menu-preview" id="menuPreview">
+      <div class="menu-preview-placeholder">
+        <p data-i18n="menu.preview_hint">献立にカーソルを合わせると<br>詳細がご覧いただけます</p>
+      </div>
+    </div>
+  </div>
+  <div class="menu-course-note">
+    <p data-i18n="menu.course">その時々の旬の食材を使ったおまかせコース、6品 ¥30,000（税込）。ドリンクペアリングや食材のご要望はご予約時にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ATMOSPHERE -->
+<section class="atmosphere section-dimmable reveal" id="space">
+  <div class="atmosphere-header">
+    <h2><span data-i18n="space.subtitle">Space &amp; Atmosphere</span><span data-i18n="space.title">空間について</span></h2>
+  </div>
+  <div class="photo-strip">
+    <div class="photo-strip-item">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="">
+      <div class="photo-strip-caption">
+        <small>Interior</small>
+        <p data-i18n="space.p1">炉を囲む、カウンター席</p>
+      </div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://images.unsplash.com/photo-1428515613728-6b4607e44363?w=800&q=80" alt="">
+      <div class="photo-strip-caption">
+        <small>Ingredients</small>
+        <p data-i18n="space.p2">青森の山と海から</p>
+      </div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80" alt="">
+      <div class="photo-strip-caption">
+        <small>Charcoal</small>
+        <p data-i18n="space.p3">津軽備長炭の火</p>
+      </div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80" alt="">
+      <div class="photo-strip-caption">
+        <small>Cuisine</small>
+        <p data-i18n="space.p4">発酵と炭火の交差点</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="info-section section-dimmable reveal" id="access">
+  <div class="info-block">
+    <h3 data-i18n="info.label">— Restaurant Info</h3>
+    <table class="info-table">
+      <tr>
+        <td data-i18n="info.name_label">店名</td>
+        <td data-i18n="info.name">炉 <span style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--smoke);font-size:12px;letter-spacing:0.2em;">RO</span></td>
+      </tr>
+      <tr>
+        <td data-i18n="info.address_label">所在地</td>
+        <td data-i18n="info.address">青森県青森市新町2-3-1<br><small style="color:var(--smoke)">JR青森駅より徒歩8分</small></td>
+      </tr>
+      <tr>
+        <td data-i18n="info.hours_label">営業時間</td>
+        <td data-i18n="info.hours">18:00 — 23:00<br><small style="color:var(--smoke)">L.O. 21:30</small></td>
+      </tr>
+      <tr>
+        <td data-i18n="info.closed_label">定休日</td>
+        <td data-i18n="info.closed">月曜・火曜</td>
+      </tr>
+      <tr>
+        <td data-i18n="info.seats_label">席数</td>
+        <td data-i18n="info.seats">カウンター8席<br><small style="color:var(--smoke)">完全予約制</small><br><small style="color:var(--smoke)">炉を囲む一体感を大切にするため、個室のご用意はございません</small></td>
+      </tr>
+      <tr>
+        <td data-i18n="info.payment_label">お支払い</td>
+        <td data-i18n="info.payment">現金・各種カード</td>
+      </tr>
+      <tr>
+        <td data-i18n="info.tel_label">お問合せ</td>
+        <td>017-xxx-xxxx</td>
+      </tr>
+    </table>
+  </div>
+  <div class="reserve-block" id="reserve" data-label="予約">
+    <p data-i18n="reserve.desc">
+      当店は完全予約制です。<br>
+      ご予約は3日前までにお願いいたします。<br>
+      アレルギーや食の制限についても、ご予約時にお知らせください。
+    </p>
+    <a href="#" class="reserve-btn" data-i18n="reserve.online">Online Reservation</a>
+    <a href="tel:017-xxx-xxxx" class="reserve-btn tel">Tel: 017-xxx-xxxx</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo">炉</div>
+    <p class="footer-copy">© 2025 RO. All rights reserved.</p>
+  </div>
+  <div class="footer-sns">
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="#">Facebook</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
